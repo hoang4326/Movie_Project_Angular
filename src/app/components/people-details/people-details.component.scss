@@ -33,7 +33,7 @@
         text-decoration: none;
         color: black;
         font-size: 15px;
-        &:last-child(){
+        &:last-child{
             color: black;
         }
         &:hover{
@@ -102,7 +102,7 @@ section.popular{
                             text-decoration: none;
                             color: black;
                             font-size: 15px;
-                            &:last-child(){
+                            &:last-child{
                                 color: black;
                             }
                             &:hover{
