@@ -83,16 +83,18 @@
   position: relative;
 }
 
-.movie-detai-poster {
+.movie-detail-poster {
   min-width: 300px;
   width: 300px;
   height: 450px;
 }
 
-.movie-detai-poster img {
+.movie-detail-poster img {
   min-width: 100%;
   width: 100%;
   height: 100%;
+  border-radius: 8px;
+
 }
 
 .movie-detail-content {

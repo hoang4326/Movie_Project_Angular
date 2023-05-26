@@ -16,7 +16,7 @@ export class TvshowDetailComponent implements OnInit {
   activeItem: string = 'Most popular';
   isHidden = false;
   statusTrailer = 'hide';
-  response = false;
+  response: boolean = true;
   addFavoriteMessage: string = '';
 
   constructor(
@@ -28,18 +28,14 @@ export class TvshowDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.tvshowId = parseInt(params['id'], 10);
-      console.log(this.tvshowId);
     });
 
     this.service.getTvShowDeatilInfo(this.tvshowId).subscribe((response) => {
       this.tvshowInfo = response;
       this.response = true;
-      console.log(response);
-      console.log(this.tvshowInfo);
     });
 
     this.service.getTvShowCastInfo(this.tvshowId).subscribe((response) => {
-      // console.log(response);
       this.castInfo = response;
     });
 
