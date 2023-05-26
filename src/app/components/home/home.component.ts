@@ -30,6 +30,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.homeService.getTodayTrend().subscribe((value) => {
       this.data = value.results;
+      console.log(this.data);
+      
     });
     this.homeService.getTrailerTV().subscribe((value) => {
       // const countTrailer = value.results.slice(0, 7);

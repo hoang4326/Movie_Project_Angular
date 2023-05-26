@@ -37,7 +37,7 @@
                 <div class="main-trending-content">
                     <div class="card-trending" *ngFor="let item of data">
                         <div class="image-card" *ngIf="!isLoad[1]">
-                            <a [routerLink]="['/movie/' + item.id]"><img src="{{'https://www.themoviedb.org/t/p/w220_and_h330_face/' + item.poster_path}}" alt="background" title="{{item.title ? item.title : item.name}}"></a>
+                            <a [routerLink]="[ item.media_type === 'movie' ? '/movie/' : '/tv/' + item.id]"><img src="{{'https://www.themoviedb.org/t/p/w220_and_h330_face/' + item.poster_path}}" alt="background" title="{{item.title ? item.title : item.name}}"></a>
                             <div class="circle-progress">
                                 <circle-progress
                                 [percent]="item.vote_average * 10"
